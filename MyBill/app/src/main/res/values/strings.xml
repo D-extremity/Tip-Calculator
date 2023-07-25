@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyBill</string>
+    <string name="is_it_inter_country">Is it Inter Country ?</string>
+</resources>
