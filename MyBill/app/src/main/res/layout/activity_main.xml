@@ -7,266 +7,251 @@
     android:background="#E17BB679"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="@dimen/_315sdp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="691dp"
+        android:elevation="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/greenish"
+
+        app:cardMaxElevation="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:paddingTop="@dimen/_10sdp"
+        app:layout_constraintVertical_bias="0.175">
 
-        android:paddingRight="@dimen/_5sdp">
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/ctax"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="@dimen/_190sdp"
-                android:layout_height="691dp"
-                android:elevation="@dimen/_20sdp"
-                app:cardBackgroundColor="@color/greenish"
-
-                app:cardMaxElevation="@dimen/_20sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
-
-                <TextView
-                    android:id="@+id/ctax"
-                    android:layout_width="match_parent"
-                    android:layout_height="85dp"
-                    android:paddingTop="@dimen/_30sdp"
-                    android:text="CGST%:"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:textSize="@dimen/_20sdp" />
+            android:layout_height="85dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_30sdp"
+            android:text="CGST%:"
+            android:textSize="@dimen/_20sdp" />
 
 
-                <TextView
-                    android:id="@+id/stax"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/_80sdp"
-                    android:text="SGST%:"
-                    android:paddingLeft="@dimen/_5sdp"
+        <TextView
+            android:id="@+id/stax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_80sdp"
+            android:text="SGST%:"
 
-                    android:textSize="@dimen/_20sdp" />
-
-
-                <TextView
-                    android:id="@+id/itax"
-                    android:layout_width="match_parent"
-                    android:layout_height="278dp"
-                    android:paddingTop="@dimen/_130sdp"
-                    android:text="IGST%:"
-                    android:paddingLeft="@dimen/_5sdp"
-
-                    android:textSize="@dimen/_20sdp" />
+            android:textSize="@dimen/_20sdp" />
 
 
-                <TextView
-                    android:id="@+id/ttax"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingTop="@dimen/_180sdp"
-                    android:text="Total Tax:"
-                    android:paddingLeft="@dimen/_5sdp"
+        <TextView
+            android:id="@+id/itax"
+            android:layout_width="match_parent"
+            android:layout_height="278dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_130sdp"
+            android:text="IGST%:"
 
-                    android:textSize="@dimen/_20sdp" />
-
-                <TextView
-                    android:id="@+id/disamount"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingTop="@dimen/_230sdp"
-                    android:text="Discount:"
-                    android:paddingLeft="@dimen/_5sdp"
-
-                    android:textSize="@dimen/_20sdp" />
-
-                <TextView
-                    android:id="@+id/amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="414dp"
-                    android:paddingTop="@dimen/_270sdp"
-                    android:text="Total Amount :"
-                    android:textColor="@color/red"
-                    android:paddingLeft="@dimen/_5sdp"
-
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="125dp"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/_320sdp"
-                    android:paddingLeft="@dimen/_5sdp">
+            android:textSize="@dimen/_20sdp" />
 
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Add"
-                        android:id="@+id/add"
-                        android:inputType="number|numberDecimal|numberSigned"
-                        android:textColor="#08EF11" />
+        <TextView
+            android:id="@+id/ttax"
+            android:layout_width="241dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_180sdp"
+            android:text="Total Tax:"
+
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/disamount"
+            android:layout_width="235dp"
+            android:layout_height="672dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_230sdp"
+            android:text="Discount:"
+
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="414dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_270sdp"
+            android:text="Total Amount :"
+            android:textColor="@color/red"
+
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_320sdp">
 
 
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="486dp"
-                    android:paddingLeft="@dimen/_100sdp"
-                    android:paddingRight="@dimen/_5sdp"
-                    android:paddingTop="@dimen/_320sdp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/deduct"
-                        android:hint="Deduct"
-                        android:inputType="number|numberDecimal|numberSigned"
-                        android:textColor="#08EF11" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="149dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_380sdp"
-                    android:text="Bill"
-                    android:textSize="@dimen/_20sdp"
-                    app:backgroundTint="#1B6D12" />
-
-            </androidx.cardview.widget.CardView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="145dp"
-                android:id="@+id/MRP"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.038"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.033">
+                android:hint="Add"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:textColor="#08EF11" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/mrp"
-                    android:layout_width="136dp"
-                    android:layout_height="60dp"
-                    android:hint="MRP"
-                    android:inputType="number|numberDecimal|numberSigned" />
-            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="145dp"
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="486dp"
+            android:paddingLeft="@dimen/_100sdp"
+            android:paddingTop="@dimen/_320sdp"
+            android:paddingRight="@dimen/_5sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/deduct"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.034"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.175">
+                android:hint="Deduct"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:textColor="#08EF11" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/dis"
-                    android:layout_width="136dp"
-                    android:layout_height="60dp"
-                    android:hint="Discount(D%)"
-                    android:inputType="number|numberDecimal|numberSigned"
-                    android:text="5" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_380sdp"
+            android:text="Bill"
+            android:textSize="@dimen/_20sdp"
+            app:backgroundTint="#1B6D12" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.027"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.302">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="123dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/cgst"
-                    android:layout_width="136dp"
-                    android:layout_height="60dp"
-                    android:hint="CGST%"
-                    android:inputType="number|numberDecimal|numberSigned"
-                    android:text="8.5" />
-            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Discount(D%)"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:text="5" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout2"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.027"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.418">
+    </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sgst"
-                    android:layout_width="136dp"
-                    android:layout_height="60dp"
-                    android:hint="SGST%"
-                    android:inputType="number|numberDecimal|numberSigned"
-                    android:text="8.5" />
-            </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="123dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302">
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch1"
-                android:layout_width="127dp"
-                android:layout_height="55dp"
-                android:switchTextAppearance="@style/TextAppearance.AppCompat.Display2"
-                android:text="@string/is_it_inter_country"
-                android:thumb="@drawable/ic_switch"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.036"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.652" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cgst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="CGST%"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:text="8.5" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.023"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.537">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/igst"
-                    android:layout_width="136dp"
-                    android:layout_height="60dp"
-                    android:editable="false"
-                    android:hint="IGST%"
-                    android:inputType="number|numberDecimal|numberSigned"
-                    android:text="00.00" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sgst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="SGST%"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:text="8.5" />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+
+        android:switchTextAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:text="@string/is_it_inter_country"
+        android:thumb="@drawable/ic_switch"
+
+        android:layout_width="123dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+
+        android:layout_width="123dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.537">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/igst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:editable="false"
+            android:hint="IGST%"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:text="00.00" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/MRP"
+        android:layout_width="123dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mrp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="MRP"
+            android:inputType="number|numberDecimal|numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,119 +9,119 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/cost"
-            android:layout_width="wrap_content"
-            android:layout_height="92dp"
-            android:autofillHints="1000"
-            android:ems="10"
-            android:hint="@string/cost_of_service"
-            android:inputType="number"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:text="@string/how_was_the_service"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="TextSizeCheck" />
-
-        <RadioGroup
-            android:id="@+id/option"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checkedButton="@id/amazing"
             android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/amazing"
-                style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
+            <EditText
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="92dp"
+                android:autofillHints="1000"
+                android:ems="10"
+                android:hint="@string/cost_of_service"
+                android:inputType="number"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="@string/how_was_the_service"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioGroup
+                android:id="@+id/option"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/amazing_20"
+                android:checkedButton="@id/amazing"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/amazing"
+                    style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/amazing_20"
+                    android:textSize="30sp"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <RadioButton
+                    android:id="@+id/good"
+                    style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/good_10"
+
+                    android:textSize="30sp"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <RadioButton
+                    android:id="@+id/okay"
+                    style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/okay_5"
+                    android:textSize="30sp"
+                    tools:ignore="VisualLintButtonSize" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:text="@string/round_up_to"
+                android:textAlignment="viewStart"
+                android:textColor="#720606"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/calculate"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="#E20808"
+                android:shadowColor="#A02121"
+                android:text="@string/make_bill"
+                android:textColor="#FFCC80"
                 android:textSize="30sp"
                 tools:ignore="VisualLintButtonSize" />
 
-            <RadioButton
-                android:id="@+id/good"
-                style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/good_10"
+                android:layout_marginStart="270sp"
+                android:text="@string/tip_amount"
+                android:textSize="16.5sp"
+                tools:ignore="TextContrastCheck" />
 
-                android:textSize="30sp"
-                tools:ignore="VisualLintButtonSize" />
-
-            <RadioButton
-                android:id="@+id/okay"
-                style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/okay_5"
-                android:textSize="30sp"
-                tools:ignore="VisualLintButtonSize" />
-        </RadioGroup>
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:switchTextAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:text="@string/round_up_to"
-            android:textAlignment="viewStart"
-            android:textColor="#720606"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="VisualLintButtonSize" />
-
-        <Button
-            android:id="@+id/calculate"
-            android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:background="#D64343"
-            android:shadowColor="#A02121"
-            android:text="@string/make_bill"
-            android:textSize="30sp"
-            tools:ignore="VisualLintButtonSize" />
-
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="270sp"
-            android:text="@string/tip_amount"
-            android:textSize="16.5sp"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="110dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="270dp"
-            android:paddingEnd="10dp"
-            android:text="@string/_00_00"
-            android:textAlignment="textEnd"
-            android:textSize="16.5sp"
-            tools:ignore="RtlSymmetry,TextContrastCheck,VisualLintBounds" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="110dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="270dp"
+                android:paddingEnd="10dp"
+                android:text="@string/_00_00"
+                android:textAlignment="textEnd"
+                android:textSize="16.5sp"
+                tools:ignore="RtlSymmetry,TextContrastCheck,VisualLintBounds" />
 
 
+        </LinearLayout>
+    </ScrollView>
 
-
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

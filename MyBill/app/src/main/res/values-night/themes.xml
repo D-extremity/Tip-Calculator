@@ -5,11 +5,11 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="colorPrimary">@color/green</item>
         <item name="colorPrimaryVariant">@color/LightGreen</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">#FAEFE8E8</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorSecondary">@color/green</item>
         <item name="colorSecondaryVariant">@color/LightGreen</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">#0B2E0C</item>
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
     </style>
 </resources>
